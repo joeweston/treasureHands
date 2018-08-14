@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+  <title>Game</title>
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/stylesheets/reset.css">
+  <link rel="stylesheet" href="assets/stylesheets/main.css">
+
+</head>
+<body>
+  <div id="main-container">
+    <h1 id="title">Treasure Hands</h1>
+    <div id="main-nav">
+      <button type="button" id="main-menu-button" disabled>Main</button>
+      <button type="button" id="inventory-button">Inventory</button>
+    </div>
+
+    <div id="resources-directions-container">
+      <div id="recources">
+        <p>Character HP: <span id="player-hp">100</span> / <span id="player-hp-max">100</span></p>
+        <p>Gold: <span id="gold">0</span> <span id="gold-increment">(1 gold per sec)</span></p>
+        <p>Character Attack: <span id="player-attack">50</span></p>
+      </div>
+
+      <div id=directions>
+        <button type="button" id="travel-north" class="hidden">N</button>
+        <button type="button" id="travel-east"  class="hidden">E</button>
+        <button type="button" id="travel-south">S</button>
+        <button type="button" id="travel-west">W</button>
+      </div>
+    </div>
+
+    <div id="main-menu">
+      <div id="menu-1">
+        <h1><span id="area-name">The Beginning</span></h1>
+        <p><span id="desc">Greetings Treasure hands. You are at a flat area called the beggining.</span></p>
+        <p><span id="travel-desc">To your east is an informative path. To your west is an entance to an old sewer. There is a shop to you south. A large Rock is blocking the northern path</span></p>
+
+        
+
+        <div id="action-buttons">
+          <button type="button" id="action" class="hidden">Action</button>
+          <button type="button" id="fight" class="hidden">Fight</button>
+          <button type="button" id="fight-boss" class="hidden">Fight Boss</button>
+        </div>
+
+        <!--Shop  -->
+        <div id="shop" class="hidden">
+          
+        </div>
+
+      </div>
+
+      <div id=fight-menu class="hidden">
+        <p>Current Enemy: <span id="current-enemy"></span></p>
+        <p>Enemy HP: <span id="enemy-hp"></span></p>
+        <p>Enemy Attack: <span id="enemy-attack"></span></p>
+        <!-- <button type="button" id="end-fight" >Give Up? (double click)</button> -->
+        <button type="button" id="fight-again" class="hidden">Fight again?</button>
+        <button type="button" id="go-back" class="hidden">Go back?</button>
+      </div>
+    </div>
+<!--===============================================================================
+
+          Inventory
+
+=================================================================================-->
+
+    <div id="inventory" class="hidden">
+      <h1>Inventory:</h1>
+      <div id="equipped">
+        Equipped: 
+        <select id="equip-weapon-select">
+
+        </select>
+      </div>
+      <div id="weapon-acc-container">
+        <div>
+          <h2>Weapons:</h2>
+          <div id="weapons">
+          </div>
+        </div>
+        <div>
+          <h2>Accessories:</h2>
+          <div id="accessories">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="log-container">
+      <p>Log</p>
+      <div id="log">
+      </div>
+    </div>
+
+    <div class="hidden">
+      <p>Dev Area</p>
+      <button type="button" id="increase-attack">Attack plus</button>
+      <button type="button" id="decrease-attack">Attack Minus</button>
+      <button type="button" id="max-health">Max health</button>
+      <button type="button" id="double-money">Double Money</button>
+      <button type="button" id="aquire-all-items">Aquire all items</button>
+    </div>
+
+  </div>
+
+  <div id="gap">
+  </div>
+
+  <div id="map">
+  </div>
+
+
+
+
+
+
+  <script src="assets/scripts/jquery-3.3.1.min.js"></script>
+
+  <script src="assets/scripts/game.js"></script>
+  <!--<script src="assets/scripts/inventory.js"></script>-->
+  <script src="assets/scripts/main.js"></script>
+</body>
+
+

@@ -1,0 +1,230 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body{
+  margin: 20px auto;
+  padding: 0 10px;
+  font-size: 12px;
+  font-family: 'Inconsolata',"Lucidia Console", Monaco, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+#gap{
+  flex: 0 0 20px;
+}
+
+#main-container{
+  width: 540px;
+  flex-shrink: 0.5;
+}
+
+button{
+  font-size: 12px;
+  font-family: 'Inconsolata',"Lucidia Console", Monaco, monospace;
+  background-color: #eee;
+  border: 1px solid #888;
+  box-shadow: 0 0 0 2px #fff inset;
+  height: 25px;
+  outline: none;
+  border-radius: 4px;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+button:active{
+  border-color: #ddd;
+  border: 1px solid rgb(244, 167, 66);
+}
+button:hover{
+  cursor: pointer;
+  box-shadow: 0 0 0 4px #fff inset;
+}
+button:disabled{
+  color: #fff;
+  border-color: #fff;
+  box-shadow: none;
+}
+button:hover:disabled{
+  cursor: default;
+}
+
+.hidden{
+  display: none;
+}
+div{
+  padding: 0 0;
+}
+#title{
+  border-bottom: 1px solid black;
+}
+h1{
+  font-size: 30px;
+}
+h2{
+  font-size: 20px;
+}
+
+#main-nav{
+  padding: 10px 0;
+}
+#main-nav button{
+  margin-right: 5px;
+}
+
+#resources-directions-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #eee;
+  padding: 5px;
+}
+#resources{
+}
+/*ui*/
+#directions{
+  background: radial-gradient(rgb(244, 167, 66) 0%, #fff 20%);
+  box-shadow: 0 0 0 2px #ddd;
+  border-radius: 20%;
+  height: 90px;
+  width: 90px;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows:  30px 30px 30px;
+  grid-template-columns: 30px 30px 30px;
+  grid-template-areas:
+  ". n ."
+  "w . e"
+  ". s ." ;
+}
+#directions > button{
+  height: 30px;
+  
+}
+#directions > button:active{
+  
+}
+#travel-north{
+  grid-area: n;
+  border-radius: 50% 50% 0% 0%;
+}
+#travel-east{
+  grid-area: e;
+  border-radius: 0% 50% 50% 0%
+}
+#travel-south{
+  grid-area: s;
+  border-radius: 0% 0% 50% 50%;
+}
+#travel-west{
+  grid-area: w;
+  border-radius: 50% 0% 0% 50%;
+}
+#main-menu{
+  padding-top: 10px;
+}
+#menu-1 > p{
+  padding-top: 10px;
+}
+#menu-1 > div{
+  padding-top: 10px;
+}
+#action-buttons > button{
+  margin-right: 20px;
+}
+
+
+#shop{
+
+}
+#shop p{
+  padding-top: 3px;
+  diplay: flex;
+  clear: both;
+}
+
+#shop button{
+  height: 16px;
+  margin-right: 4px;
+}
+#shop p > span{
+  padding-left: 30px;
+  float: right;
+}
+
+#shop .shop{
+  display: flex;
+  justify-content: space-around;
+}
+#log-container{
+  background-color: #fff;
+  padding-top: 10px;
+}
+#log{
+  width: 100%;
+  height: 74px;
+  border: 1px solid black;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  padding: 12px 0;
+}
+
+/*================================================================
+
+              Inventory
+
+ ===============================================================*/
+#inventory{
+  padding-top: 10px;
+}
+#equipped{
+  padding: 5px 0;
+}
+#weapon-acc-container{
+
+}
+#weapon-acc-container > div{
+  padding-top: 10px;
+}
+#weapons p, #accessories p{
+  padding-top: 3px;
+} 
+
+/*================================================================
+
+              map
+
+ ===============================================================*/
+#map{
+  margin-top: 30px;
+  overflow: auto;
+  font-size: 8px;
+  outline: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(20, 3ch);
+  grid-template-rows: repeat(50, 8px);
+}
+#map > div {
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.marked{
+  color: rgb(244, 167, 66);
+}
+
+
+
