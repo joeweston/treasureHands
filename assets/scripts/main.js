@@ -404,12 +404,12 @@ $(document).ready(function(){
 //             map
 //
 //======================================================================================
-  for(let y = 0; y < 50; y++){
+  /*for(let y = 0; y < 50; y++){
     for(let x = 0; x < 20; x++)
       $(`<div id="${x}-${y}">${weightedRandom(
        [[" ", 2000],["'",50],[".;",10],["^^",10],["/\\", 10],["..",30],[".",50],["l ",2],["j",2]])
       }</div>`).appendTo("#map");
-  }
+  }*///Added in HTML
   function markPathCoord(x, y, symbol){
     $(`#${x}-${y}`).text(symbol);
   }
